@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("img/background.jpg");
+  background-size: cover;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Jua", sans-serif;
+  color: rgba(199, 199, 219, 0.719);
+}
+
+input {
+  border-radius: 100px;
+  width: 500px;
+  height: 35px;
+  border-color: #6363c2;
+  border-style: solid;
+  font-size: 18px;
+  padding-left: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: "Jua", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 700px) {
+  input {
+    width: 70%;
+  }
+}
+.search-button {
+  background-color: #ddd;
+  border-radius: 36px;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  color: white;
+  z-index: 1;
+  transition: 1.2s;
+  background: linear-gradient(to right bottom, #4776e6, #8e54e9);
+  border: none;
+  opacity: 1;
+  text-align: center;
+}
+
+.search-button:hover {
+  transform: translate(5px, 0px);
+  transition: 1.2s;
+  opacity: 0.8;
+}
+
+.centerize {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.input {
+  margin-top: 20%;
+}
+
+.icon {
+}

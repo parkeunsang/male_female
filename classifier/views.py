@@ -8,6 +8,7 @@ import pickle
 import time
 # Create your views here.
 model = keras.models.load_model("./data/lstm_model.h5")
+okt = Okt()
 with open('./data/tokenizer.pickle', 'rb') as f:
     tokenizer = pickle.load(f)
 
@@ -33,13 +34,13 @@ def clf(request, sentence):
 def sentences_to_seq(sentences, tokenizer):
     if type(sentences) == str:
         sentences = [sentences]
-    
     morphs_list = to_morph(sentences)
     sequences = tokenizer.texts_to_sequences(morphs_list)
     if not sequences[0]:  # 빈 값이면
         return -1
     # empty = [idx for idx, x in enumerate(sequences) if not x]
     X_test = pad_sequences(sequences, padding='post', maxlen=15)
+    # 이부분이랑 
     pred = model.predict(X_test)
     # for i in empty:
     #     pred[i] = [None]
@@ -47,10 +48,13 @@ def sentences_to_seq(sentences, tokenizer):
 
 
 def to_morph(sentences):
-    okt = Okt()
+    print('tm')
+    # 이부분이 좀 오래걸리네
+    
     morphs = []
     for comment in sentences:
         m = okt.pos(comment)
         m = [x[0] for x in m if x not in  ['\n', '.', ','] and x[1] not in ['Josa', 'Suffix']]
         morphs.append(m)
+    print('tme')
     return morphs

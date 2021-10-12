@@ -13,15 +13,15 @@
 
 - Web, Mobile환경 지원
 
-![image-20211012161230591](C:\Users\multicampus\projects\male_female\README.assets\image-20211012161230591.png)
+![image-20211012161230591](README.assets\image-20211012161230591.png)
 
 
 
 - 넹 vs 네
 
-![image-20211012161324846](C:\Users\multicampus\projects\male_female\README.assets\image-20211012161324846.png)
+![image-20211012161324846](README.assets\image-20211012161324846.png)
 
-![image-20211012161423559](C:\Users\multicampus\projects\male_female\README.assets\image-20211012161423559.png)
+![image-20211012161423559](README.assets\image-20211012161423559.png)
 
 ## To Do List
 
